@@ -1,0 +1,103 @@
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	
+	<link rel="shortcut icon" href="img/logo2.png" type="image/x-icon" sizes="16x16 24x24 32x32 64x64"/>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet">
+
+	<title>CIS455/555 Project</title>
+	
+	<script type = "text/js">
+	$(function (){
+		$("body").hover(function(){
+			alert("click");
+		});
+	});
+	
+	</script>
+	<style type= "text/css">
+		*{
+		font-family: 'Arimo', sans-serif;
+		}
+		
+		#background {
+			content: ' ';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -10;
+			opacity: 1;
+			background-repeat: no-repeat;	
+			background-position: bottom left;
+			-ms-background-size: cover;
+			-o-background-size: cover;
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
+			background-size: cover;
+			}
+	</style>
+	
+	</head>
+	
+	<body>
+		<div id = "background"></div>
+		<div class = "container-fluid">
+			<br/><br/>
+			<div class = "row" >
+				<div class = "col-lg-3 col-md-3 col-sm-12"></div>
+				
+				<div class = "col-lg-6 col-md-6 col-sm-12"  >	
+				
+					<div class = "logo">
+						<img src = "img/logo5.png"  class = "center-block" align = "center" height="250px" alt = "it depends"></img>
+					</div>
+					<br>
+					<div class = "search">
+						
+						<form action="/FurySearch/search" method="GET">
+							<div class="form-group">
+									
+									<input id="searchBox" type="text" style="width: 100%" name="query"
+									value="" class="form-control" placeholder="It depends ....">
+					
+									<div id="location">
+										<input type="hidden" name="location" value="Philadelphia" />
+									</div>
+									
+									<div id="pageNo">
+										<input type="hidden" name="pageNo" value="1" />
+									</div>
+								<br/>
+						
+								<input type="submit" class="btn btn-default center-block" id = "search" align="center"></input>
+							 </div>
+						</form>
+					</div>
+					
+				</div>
+
+				<div class = "col-lg-3 col-md-3 col-sm-12"></div>
+			</div> <!-- row ending -->
+			
+			<div class = "row" id = "footer">
+				<div class = "col-md-12 col-lg-12 col-sm-12">
+					
+				</div>
+			</div>
+		</div> <!-- container ending -->
+	</body>
+	
+</html>

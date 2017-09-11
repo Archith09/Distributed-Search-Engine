@@ -1,0 +1,58 @@
+Instructions to run crawler on EC2
+- Create a .jar file for the Distributed Crawler Master (final-master-crawler.jar)
+- Create a .jar file for the Distributed Crawler Worker
+
+Node requirements for Crawler:
+- sudo yum update 
+- sudo yum install java-1.8.0
+- sudo yum remove java-1.7.0-openjdk
+
+Uploading a jar
+rsync -azv --progress -e "ssh -i private.pem" path_to_jar.jar public_ipv:.
+
+Connecting to EC2
+sudo ssh -i "/home/.aws/credentials/private.pem" public_ipv
+
+
+
+Running master node
+- java -jar final-master-crawler.jar masterport worker1IP:port worker2IP:port worker2IP:port
+
+Running worker node
+-  Worker: java -Xms512m -Xmx1024m -Xss512k -jar crawler.jar seedURL path_to_db download_limit page_size crawler_thread back_host_queue storage_thread push_interval crawler_delay S3bucket node
+
+Indexer:
+Edit the arraylist in edu.upenn.cis455.configuration.Constants class to include the worker address 
+
+Master - to upload master jar for indexer
+Make final-master-indexer.jar by making the project using edu.upenn.cis455.master.Master as main class 
+rsync -azv --progress -e "ssh -i /home/cis455/.ec2/login.pem" /home/cis455/workspace/final-master-indexer.jar ec2-user@ec2-54-173-32-226.compute-1.amazonaws.com:.
+
+Worker - to upload indexer worker jar (NOTE you will have to upload this jar to 15 workers in the distributed cluster) 
+Make final-worker-indexer-backup.jar by making the project using edu.upenn.cis455.master.Worker as main class
+rsync -azv --progress -e "ssh -i /home/cis455/.ec2/login.pem" /home/cis455/workspace/final-worker-indexer-backup.jar ec2-user@ec2-54-204-182-74.compute-1.amazonaws.com:.
+
+Run the master jar using the below command
+java -jar final-master-indexer.jar 8000
+8000 is port number here
+
+Run the worker jar using the below command
+java -Xms512m -Xmx8000m -Xss512k -jar final-worker-indexer-backup.jar <master IP+Port> <worker number> <worker IP+Port> <input file> <main output db> <backup output db> 32 1000 5000 1 5
+
+
+SEARCH ENGINE INSTRUCTIONS
+Requirements:
+- Install Tomcat 7.0.21
+- java.1.8.0
+
+Instruction to run search engine on EC2
+- Create a .war file for the search engine code
+- Upload war using the following command:
+	- scp -i /home/.aws/private.pem path_to_war_file root@INSTANCE_PUBLIC_DNS_NAME:/env/tomcat/apache-tomcat-7.0.77/webapps/name_of_war.war
+	
+- On EC2 terminal execute the following code:
+	- mv webapps/ROOT webapps/xROOT
+	- ./bin/startup.sh (to run tomcat)
+	- ./bin/shutdown.sh (to run tomcat)
+	- 
+- Go to browser and type in the public key for the EC2 machine with the Tomcat port number and the required project path (Make sure the web.xml is edited appropriately)

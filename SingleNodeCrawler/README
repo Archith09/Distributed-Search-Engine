@@ -1,0 +1,1 @@
+rsync -azv --progress -e "ssh -i /home/.aws/credentials/rsolanki_ec2.pem" /home/cis455/workspace/crawler_g16_v5.jar ec2-user@ec2-34-209-12-83.us-west-2.compute.amazonaws.com:.

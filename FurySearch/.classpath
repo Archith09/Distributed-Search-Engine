@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-configuration2-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/guava-11.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-auth-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-common-3.0.0-alpha2.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-core-3.0.0-alpha2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.9.0-20161011.053116-27.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.9.0-20160930.222323-13.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.9.0-20161012.002007-91.jar"/>
+	<classpathentry kind="lib" path="lib/je-6.2.31.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-9.3.13.v20161014.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-9.3.13.v20161014.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-server-9.3.13.v20161014.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-9.3.13.v20161014.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-webapp-9.3.13.v20161014.jar"/>
+	<classpathentry kind="lib" path="lib/jtidy-r938.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/maxent-3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/opennlp-tools-1.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.8.0-alpha0.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.7.21.jar"/>
+	<classpathentry kind="lib" path="lib/spark-core-1.1.1.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
