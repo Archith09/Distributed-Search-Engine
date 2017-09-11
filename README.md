@@ -20,8 +20,6 @@ Did you complete any extra-credit tasks? If so, which ones?
 • Crawler
 	- Content Seen Test
 	- Image crawl and search
-	- Tried implementing the off-page feature but ran into Verisign warnings while using WHOIS client. 
-	Therefore did not continue with the same.
 • Indexer/TF-IDF Retrieval Engine
 	- Include document and word metadata
 	- Location specific results
@@ -39,7 +37,6 @@ Any special instructions for building and running your solution?
   (include detailed instructions, or write 'None')
 	Please check detailed instruction file ec2commands.txt to run the crawler, indexer and search engine.
 	The entire project (including jars) is available on git account of G16 provided by professor.
-	We accidentally forgot to submit spell check python file. Uploading to git now. To run the python server, use command "python spell.py"
 	
 Did you personally write _all_ the code you are submitting
 (other than code from the course web page)?
